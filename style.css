@@ -6,3 +6,56 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
 }
+
+.portfolio img {
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.portfolio img:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Lightbox Styling */
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.lightbox-content {
+    max-width: 90%;
+    max-height: 90%;
+    margin: auto;
+    display: block;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+}
+
+/* Close Button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    font-size: 35px;
+    color: white;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 5px 20px;
+    border-radius: 5rem;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.close:hover {
+    background: rgba(255, 255, 255, 0.4);
+}
