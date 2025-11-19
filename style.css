@@ -120,11 +120,12 @@ body {
     border-width: 2px;
 }
 
-/* --- Portfolio/Lightbox (Keep original styles and apply modern touch) --- */
+/* --- Portfolio/Lightbox (The Fix is here!) --- */
+
 .portfolio img {
     cursor: pointer;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    border-radius: 8px; /* Apply rounded corners to images */
+    border-radius: 8px; /* Rounded corners for a softer, modern look */
 }
 
 .portfolio img:hover {
@@ -132,21 +133,58 @@ body {
     box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.2);
 }
 
-/* Lightbox Styling (minimal changes needed) */
+/* 🖼️ LIGHTBOX CORE STYLES - THIS IS THE FIX! */
 .lightbox {
-    /* Existing styles are fine, ensuring a high z-index */
-    z-index: 1050; /* Higher than Bootstrap fixed navbar/modal default (1040) */
+    display: none; /* Must be hidden initially. Your JS will change this to 'flex' */
+    position: fixed; /* Ensures it covers the entire viewport */
+    z-index: 1060; /* Crucial: Ensures it's on top of everything (higher than Bootstrap's modal/navbar) */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9); /* Dark semi-transparent background */
+    overflow: auto; /* Allows scrolling if image is too large */
+    /* Use flexbox to center the image perfectly */
+    align-items: center; 
+    justify-content: center;
 }
 
 .lightbox-content {
-    /* Existing styles are fine */
+    margin: auto;
+    display: block;
+    max-width: 90%; /* Responsive sizing */
+    max-height: 90vh; /* Responsive sizing for height */
+    object-fit: contain;
+    animation-name: zoom;
+    animation-duration: 0.6s;
 }
 
+/* The close button (X) */
 .close {
-    /* Existing styles are fine */
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+    cursor: pointer;
 }
 
-/* Add to your existing style.css */
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Optional Zoom animation for a smooth appearance */
+@keyframes zoom {
+    from {transform: scale(0.1)} 
+    to {transform: scale(1)}
+}
+/* 🖼️ END LIGHTBOX CORE STYLES */
+
 
 /* Ensures the image inside the portfolio-item takes up the card space nicely */
 .portfolio-item img {
