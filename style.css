@@ -1,61 +1,184 @@
+/* --- Global Reset & Fonts --- */
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box; /* Crucial for modern layouts */
 }
 
+/* Using a modern, sans-serif stack for professionalism */
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    color: #343a40; /* Dark gray for body text */
+    line-height: 1.6;
 }
 
+/* Custom Primary Color (e.g., a professional blue/teal) */
+/* Using CSS variables makes theme changes easy */
+:root {
+    --primary-color: #007bff; /* Professional Blue (Use your desired brand color here) */
+    --secondary-color: #6c757d; /* Gray */
+    --dark-color: #212529; /* Black */
+    --light-color: #f8f9fa; /* Light Gray */
+}
+
+/* Overriding Bootstrap colors for custom buttons */
+.btn-primary {
+    background-color: var(--primary-color) !important;
+    border-color: var(--primary-color) !important;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3 !important; /* Slightly darker shade on hover */
+    border-color: #0056b3 !important;
+    transform: translateY(-2px); /* Subtle lift effect */
+}
+
+.highlight-text {
+    color: var(--primary-color);
+}
+
+/* --- Layout and Structure --- */
+
+/* Ensures content starts below the fixed navbar */
+.content-start {
+    padding-top: 5rem; /* Adjust based on your navbar height */
+}
+
+/* --- Navbar Styling --- */
+.navbar {
+    background-color: #ffffff !important; /* White background for clean look */
+}
+
+.navbar-brand {
+    padding: 0.5rem 0;
+}
+
+.nav-link {
+    color: var(--dark-color) !important;
+    padding: 0.5rem 1rem !important;
+    position: relative;
+}
+
+.nav-link:hover {
+    color: var(--primary-color) !important;
+}
+
+.nav-link.active {
+    color: var(--primary-color) !important;
+    font-weight: bold;
+}
+
+/* --- Hero Section Styling (First Impression) --- */
+#hero-section {
+    /* Using a linear gradient with a dark background for professionalism */
+    background: linear-gradient(135deg, var(--dark-color) 0%, #343a40 100%);
+    color: white;
+    padding: 10rem 0; /* Add top/bottom padding for large display */
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden; /* prevents scrollbars from hover effects */
+}
+
+/* Optional: Subtle animation for the headline */
+.display-1 {
+    animation: fadeIn 1s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- About Section Styling --- */
+
+.profile-img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border: 8px solid var(--light-color); /* Light border for separation */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Skills Section Styling (Card-Based) --- */
+.card {
+    transition: all 0.3s ease;
+    border-radius: 10px; /* Rounded corners for a softer, modern look */
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Lift card on hover */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* --- Contact Section Styling --- */
+.contact-section {
+    background-color: var(--primary-color) !important; /* Use primary color for a bold, contrasting section */
+}
+
+.contact-section .btn-outline-light {
+    border-width: 2px;
+}
+
+/* --- Portfolio/Lightbox (Keep original styles and apply modern touch) --- */
 .portfolio img {
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    border-radius: 8px; /* Apply rounded corners to images */
+}
+
+.portfolio img:hover {
+    transform: scale(1.03); /* Subtle scale */
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Lightbox Styling (minimal changes needed) */
+.lightbox {
+    /* Existing styles are fine, ensuring a high z-index */
+    z-index: 1050; /* Higher than Bootstrap fixed navbar/modal default (1040) */
+}
+
+.lightbox-content {
+    /* Existing styles are fine */
+}
+
+.close {
+    /* Existing styles are fine */
+}
+
+/* Add to your existing style.css */
+
+/* Ensures the image inside the portfolio-item takes up the card space nicely */
+.portfolio-item img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover; /* Ensures images cover the area without distortion */
     cursor: pointer;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
-.portfolio img:hover {
-    transform: scale(1.05);
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+/* Portfolio Hover Effect - Kept from original, but adjusted for modernity */
+.portfolio-item:hover img {
+    transform: scale(1.03); 
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.2);
 }
 
-/* Lightbox Styling */
-.lightbox {
-    display: none;
-    position: fixed;
-    z-index: 2000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.8);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+/* Style for the container card for a unified look */
+.portfolio-item.card {
+    border: none;
+    overflow: hidden; /* Clips the image corners to the card's rounded borders */
+    transition: all 0.3s ease;
+    border-radius: 8px; /* Consistent rounded corners */
 }
 
-.lightbox-content {
-    max-width: 90%;
-    max-height: 90%;
-    margin: auto;
-    display: block;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+/* If you need logos to stand out on white, you can use padding and a light background on the card */
+.portfolio-item.card img.p-3 {
+    background-color: #f8f9fa; /* Light background for logos that are white/transparent */
 }
 
-/* Close Button */
-.close {
-    position: absolute;
-    top: 15px;
-    right: 25px;
-    font-size: 35px;
-    color: white;
-    background: rgba(255, 255, 255, 0.2);
-    padding: 5px 20px;
-    border-radius: 5rem;
-    cursor: pointer;
-    transition: 0.3s ease;
-}
-
-.close:hover {
-    background: rgba(255, 255, 255, 0.4);
+/* Tag styling for technology badges */
+.badge {
+    padding: 0.5em 1em;
+    font-size: 0.85rem;
+    font-weight: 500;
 }
