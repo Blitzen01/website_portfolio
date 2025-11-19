@@ -78,6 +78,8 @@ body {
     min-height: 100vh;
     position: relative;
     overflow: hidden; /* prevents scrollbars from hover effects */
+    border-bottom-left-radius: 5rem;
+    border-bottom-right-radius: 5rem;
 }
 
 /* Optional: Subtle animation for the headline */

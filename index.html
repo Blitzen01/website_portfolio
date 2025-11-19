@@ -16,8 +16,7 @@
         </head>
     
     <body>
-        <div class="content-start"> 
-        <nav class="navbar navbar-expand-lg fixed-top border-bottom shadow-sm" data-bs-theme="light">
+        <nav class="navbar navbar-expand-lg border-bottom shadow-sm mb-3" data-bs-theme="light">
             <div class="container-fluid">
                 <a id="nav_bar_logo" class="navbar-brand" href="index.html">
                     <img class="rounded-circle" src="images/logo.jpg" alt="Logo" style="width: 2.5rem; height: 2.5rem; object-fit: cover;"> 
@@ -48,11 +47,11 @@
             </div>
         </nav>
 
-        <section class="hero d-flex align-items-center text-center text-light min-vh-100" id="hero-section">
+        <section class="hero d-flex align-items-center text-center text-light min-vh-100 shadow" id="hero-section">
             <div class="container z-index-1"> <div class="row justify-content-center">
                     <div class="col-lg-10">
                         <h1 class="fw-bolder display-1">Hi, I'm <span class="highlight-text">Ron Justin G. De Guzman</span></h1>
-                        <p class="lead fw-normal fs-4 mt-3">Aspiring Web Developer | IT Graduate | Digital Creator</p>
+                        <p class="lead fw-normal fs-4 mt-3">Web Development Enthusiast | IT Graduate | Experienced in System Troubleshooting & Support | Digital Creator</p>
                         <a href="#contact" class="btn btn-primary btn-lg mt-4 shadow-lg">
                             <i class="fas fa-envelope me-2"></i>Get In Touch
                         </a>
@@ -61,6 +60,7 @@
             </div>
         </section>
 
+        <!-- about section -->
         <section id="about" class="py-5 bg-white">
             <div class="container">
                 <div class="row align-items-center">
@@ -69,12 +69,33 @@
                     </div>
                     <div class="col-md-7">
                         <h2 class="display-5 fw-bold mb-4">About Me</h2>
+                        
                         <p class="lead">
-                            I am a recent <b>IT graduate</b> with a passion for web development and software engineering. I have hands-on experience in various programming languages and love tackling complex problems.
+                            I am a highly motivated <b>recent IT graduate</b> from Cavite State University, eager to contribute strong technical skills in a dynamic business environment. My goal is to collaborate with industry experts, expand my knowledge, and build innovative solutions.
                         </p>
-                        <p>
-                            I enjoy problem-solving, optimizing processes, and learning new technologies to build impactful solutions. My goal is to leverage my technical and creative skills to contribute to innovative projects.
+                        
+                        <h3 class="fw-bold mb-3 mt-4 text-primary">Core Expertise</h3>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <ul class="list-unstyled">
+                                    <li class="mb-2"><i class="fas fa-code me-2 text-success"></i><b>Web Development:</b> HTML, CSS, JavaScript</li>
+                                    <li class="mb-2"><i class="fas fa-server me-2 text-success"></i><b>Database Management:</b> Practical experience using Xampp</li>
+                                    <li class="mb-2"><i class="fas fa-laptop-code me-2 text-success"></i><b>Programming:</b> Proficient in C++ and Java</li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-6">
+                                <ul class="list-unstyled">
+                                    <li class="mb-2"><i class="fas fa-wrench me-2 text-danger"></i><b>Problem Solving:</b> Strong troubleshooting and debugging capabilities.</li>
+                                    <li class="mb-2"><i class="fas fa-paint-brush me-2 text-danger"></i><b>Digital Creation:</b> Skilled in Digital Art and Editing using Adobe Photoshop</li>
+                                    <li class="mb-2"><i class="fas fa-certificate me-2 text-danger"></i><b>Certifications:</b> Responsive Web Design & Java Projects</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <p class="mt-4">
+                            I am focused on leveraging my technical foundation to further enhance my abilities through practical experience, ensuring code quality, and delivering successful, maintainable projects.
                         </p>
+                        
                         <a href="portfolio.html" class="btn btn-outline-dark me-3 mt-3">View My Work</a>
                         <a href="files/resume.pdf" download class="btn btn-primary mt-3">
                             <i class="fas fa-download me-2"></i>Download Resume
@@ -84,69 +105,111 @@
             </div>
         </section>
         
+        <!-- skill section -->
         <section id="skills" class="py-5 bg-light">
             <div class="container">
                 <h2 class="text-center display-5 fw-bold mb-5">My Skills</h2>
                 <div class="row text-center g-4">
+                    
                     <div class="col-lg-3 col-md-6">
                         <div class="card h-100 shadow-sm border-0">
                             <div class="card-body">
                                 <i class="fas fa-laptop-code fa-3x text-primary mb-3"></i>
                                 <h5 class="card-title fw-bold">Web Development</h5>
-                                <p class="card-text">HTML5, CSS3, JavaScript, Bootstrap 5, PHP, jQuery</p>
+                                <p class="card-text">HTML, CSS, JavaScript, Responsive Design</p>
                             </div>
                         </div>
                     </div>
+                    
                     <div class="col-lg-3 col-md-6">
                         <div class="card h-100 shadow-sm border-0">
                             <div class="card-body">
                                 <i class="fas fa-code fa-3x text-primary mb-3"></i>
-                                <h5 class="card-title fw-bold">Programming</h5>
-                                <p class="card-text">C++, Java, Python, Data Structures</p>
+                                <h5 class="card-title fw-bold">Programming Languages</h5>
+                                <p class="card-text">C++, Java, Object-Oriented Programming (OOP)</p>
                             </div>
                         </div>
                     </div>
+                    
                     <div class="col-lg-3 col-md-6">
                         <div class="card h-100 shadow-sm border-0">
                             <div class="card-body">
-                                <i class="fas fa-palette fa-3x text-primary mb-3"></i>
-                                <h5 class="card-title fw-bold">Creative Design</h5>
-                                <p class="card-text">Adobe Photoshop, Premiere Pro, Canva, Capcut</p>
+                                <i class="fas fa-database fa-3x text-primary mb-3"></i>
+                                <h5 class="card-title fw-bold">Database Management</h5>
+                                <p class="card-text">Xampp, SQL Fundamentals, Data Organization</p>
                             </div>
                         </div>
                     </div>
+
                     <div class="col-lg-3 col-md-6">
                         <div class="card h-100 shadow-sm border-0">
                             <div class="card-body">
                                 <i class="fas fa-tools fa-3x text-primary mb-3"></i>
-                                <h5 class="card-title fw-bold">Technical Skills</h5>
-                                <p class="card-text">Troubleshooting, Debugging, SQL, Network Config</p>
+                                <h5 class="card-title fw-bold">System Troubleshooting</h5>
+                                <p class="card-text">Problem Diagnosis, Technical Support, Debugging, IT Maintenance</p>
                             </div>
                         </div>
                     </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="card h-100 shadow-sm border-0">
+                            <div class="card-body">
+                                <i class="fas fa-palette fa-3x text-primary mb-3"></i>
+                                <h5 class="card-title fw-bold">Digital Art & Design</h5>
+                                <p class="card-text">Adobe Photoshop, Canva, Digital Art, Image Editing</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-3 col-md-6">
+                        <div class="card h-100 shadow-sm border-0">
+                            <div class="card-body">
+                                <i class="fas fa-video fa-3x text-primary mb-3"></i>
+                                <h5 class="card-title fw-bold">Video Production</h5>
+                                <p class="card-text">Adobe Premiere, CapCut, Video Editing, Content Creation</p>
+                            </div>
+                        </div>
+                    </div>
+                    
                 </div>
             </div>
         </section>
 
-        <section id="contact" class="contact-section py-5 text-center">
+        <section id="contact" class="contact-section py-5 text-center bg-dark">
             <div class="container text-white">
                 <h2 class="display-5 fw-bold mb-3">Let's Connect</h2>
                 <p class="lead mb-4">I'm currently available for new opportunities. Let's collaborate and build something amazing together!</p>
                 <div class="d-flex justify-content-center flex-wrap">
-                    <a href="https://www.facebook.com/ronjustin.work" target="_blank" class="btn btn-outline-light btn-lg me-3 mb-3">
+                    
+                    <a href="https://www.facebook.com/ronjustin.work" target="_blank" class="btn btn-lg me-3 mb-3" style="background-color: #3b5998; color: white; border-color: #3b5998;">
                         <i class="fab fa-facebook-f me-2"></i>Facebook
                     </a>
+                    
                     <a href="mailto:ronjustin22@gmail.com" class="btn btn-light btn-lg me-3 mb-3 text-dark">
                         <i class="fas fa-envelope me-2"></i>Email Me
                     </a>
+                    
+                    <a href="https://wa.me/639219879017" target="_blank" class="btn btn-success btn-lg me-3 mb-3">
+                        <i class="fab fa-whatsapp me-2"></i>WhatsApp
+                    </a>
+                    
+                    <a href="https://t.me/639219879017" target="_blank" class="btn btn-info btn-lg me-3 mb-3">
+                        <i class="fab fa-telegram-plane me-2"></i>Telegram
+                    </a>
+                    
+                    <a href="viber://chat?number=639219879017" target="_blank" class="btn btn-lg me-3 mb-3" style="background-color: #7360F2; color: white; border-color: #7360F2;">
+                        <i class="fab fa-viber me-2"></i>Viber
+                    </a>
+                    
                     <button onclick="copyToClipboard()" class="btn btn-outline-light btn-lg mb-3">
                         <i class="fas fa-phone-alt me-2"></i>Copy Phone Number
                     </button>
+                    
                 </div>
             </div>
         </section>
 
-        <footer class="bg-dark text-secondary py-3 border-top border-secondary">
+        <footer class="bg-dark text-secondary py-1 border-top border-secondary">
             <div class="container text-center">
                 <span>2025 &copy; Ron Justin De Guzman. All rights reserved.</span>
             </div>
