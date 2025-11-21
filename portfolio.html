@@ -8,6 +8,8 @@
         <link rel="icon" type="image/png" href="images/logo.jpg">
         <link rel="stylesheet" href="style.css">
 
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+        
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
         <script src="https://kit.fontawesome.com/9475ab4ee0.js" crossorigin="anonymous"></script>
@@ -17,28 +19,46 @@
         <script defer src="https://code.jquery.com/jquery-3.7.0.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/jwt-decode@3.1.2/build/jwt-decode.min.js"></script>
         <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+        
+        <style>
+            .contact-btn {
+                transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+                border: 1px solid rgba(255, 255, 255, 0.3) !important; /* Light border */
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+            }
+
+            .contact-btn:hover {
+                transform: scale(1.05); /* Scales button up by 5% on hover */
+                box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3); /* Stronger shadow on hover */
+            }
+        </style>
     </head>
 
-    <body>
+    <body class="portfolio-body">
         <nav class="navbar navbar-expand-lg border-bottom shadow-sm mb-3" data-bs-theme="light">
             <div class="container-fluid">
                 <a id="nav_bar_logo" class="navbar-brand" href="index.html">
-                    <img class="rounded-circle" src="images/logo.jpg" alt="Logo" style="width: 2.5rem; height: 2.5rem; object-fit: cover;">
+                    <img class="rounded-circle" src="images/logo.jpg" alt="Logo" style="width: 2.5rem; height: 2.5rem; object-fit: cover;"> 
                 </a>
-                <span class="navbar-text d-none d-sm-inline me-auto fw-bold text-dark">Ron Justin G. De Guzman</span>
+                <span class="navbar-text d-none d-sm-inline me-auto fw-bold text-dark">Ron Justin G. De Guzman</span> 
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0 mt-3 mt-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link" href="index.html">Home</a>
+                            <a class="nav-link active fw-bold" aria-current="page" href="index.html">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active fw-bold" aria-current="page" href="portfolio.html">Portfolio</a>
+                            <a class="nav-link" href="portfolio.html">Portfolio</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="index.html#about">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html#skills">Skills</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="index.html#contact">Contact</a>
@@ -48,232 +68,227 @@
             </div>
         </nav>
 
-        <header class="text-center py-5 bg-light border-bottom">
-            <div class="container">
-                 <h1 class="display-4 fw-bold mb-2">My Portfolio Showcase</h1>
-                 <p class="lead text-secondary">A collection of my recent web development projects and digital creations.</p>
+        <header class="text-center py-5 bg-dark border-bottom border-info">
+            <div class="container text-white">
+                <h1 class="display-4 fw-bold mb-2 header-title">My Portfolio Showcase</h1>
+                <p class="lead text-secondary">Client-focused web applications and creative designs that deliver real-world value.</p>
             </div>
         </header>
 
-        <section class="portfolio py-5 bg-white">
+        <section class="portfolio py-5" style="background-color: #f8f9fa;">
             <div class="container">
                 
-                <!-- website section -->
                 <div class="mb-5">
-                    <h2 class="display-5 fw-bold text-center mb-3 text-primary"><i class="fas fa-code me-2"></i>Web Development Projects</h2>
+                    <h2 class="display-5 fw-bold text-center mb-3 text-dark section-title"><i class="fas fa-code me-2 text-info"></i>Web Development Projects</h2>
                     <p class="text-center text-secondary mb-5">Web Applications, Capstone Projects, and Commissioned Systems.</p>
 
-                    <h4 class="text-center fw-bold mt-5 mb-4 border-bottom pb-2">Inventory Management System (IMS) | Commissioned</h4>
-                    <div class="row g-4 justify-content-center">
-                        <div class="col-12 mb-3">
-                            <p class="text-center text-muted">A commissioned web interface designed for streamlined inventory and sales tracking, featuring graphs and table-based data display.</p><div class="text-center mb-4">
-                                <span class="badge bg-warning text-dark me-2">PHP</span>
-                                <span class="badge bg-warning text-dark me-2">MySQL</span>
-                                <span class="badge bg-success me-2">Boostrap</span>
-                                <span class="badge bg-success me-2">HTML/CSS</span>
-                                <span class="badge bg-success me-2">JavaScript</span>
-                                <span class="badge bg-info">Commissioned</span>
+                    <div class="project-container mb-5 p-4 rounded shadow-lg" style="background-color: #ffffff;">
+                        <h4 class="text-center fw-bold mt-2 mb-4 text-dark project-title">Inventory Management System (IMS) | Commissioned</h4>
+                        <div class="row g-4 justify-content-center">
+                            <div class="col-12 mb-3">
+                                <p class="text-center text-dark project-description"><b>Solution Focus:</b> A commissioned web interface designed for streamlined inventory and sales tracking, successfully reducing manual errors and providing <b>real-time data visualization</b> through graphs and table-based data display.</p>
+                                <div class="text-center mb-4">
+                                    <span class="custom-badge badge-php me-2">PHP</span>
+                                    <span class="custom-badge badge-mysql me-2">MySQL</span>
+                                    <span class="custom-badge badge-general me-2">Bootstrap</span>
+                                    <span class="custom-badge badge-general me-2">HTML/CSS</span>
+                                    <span class="custom-badge badge-js me-2">JavaScript</span>
+                                    <span class="custom-badge badge-status me-2">Commissioned</span>
+                                </div>
+                                <div class="text-center mt-3">
+                                    <a href="files/ims_documentation.pdf" target="_blank" class="btn btn-primary btn-lg"><i class="fas fa-file-alt me-1"></i> <b>View System Documentation</b></a>
+                                </div>
                             </div>
-                        </div>
+                            
+                            <div class="col-lg-4 col-md-6">
+                                <div class="portfolio-item card shadow h-100">
+                                    <img src="images/website/ims/ims1.png" loading="lazy" class="img-fluid rounded-top" alt="IMS Screenshot 1" onclick="openLightbox(this)">
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6">
+                                <div class="portfolio-item card shadow h-100">
+                                    <img src="images/website/ims/ims2.png" loading="lazy" class="img-fluid rounded-top" alt="IMS Screenshot 2" onclick="openLightbox(this)">
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6">
+                                <div class="portfolio-item card shadow h-100">
+                                    <img src="images/website/ims/ims3.png" loading="lazy" class="img-fluid rounded-top" alt="IMS Screenshot 3" onclick="openLightbox(this)">
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6">
+                                <div class="portfolio-item card shadow h-100">
+                                    <img src="images/website/ims/ims4.png" loading="lazy" class="img-fluid rounded-top" alt="IMS Screenshot 4" onclick="openLightbox(this)">
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6">
+                                <div class="portfolio-item card shadow h-100">
+                                    <img src="images/website/ims/ims5.png" loading="lazy" class="img-fluid rounded-top" alt="IMS Screenshot 5" onclick="openLightbox(this)">
+                                </div>
+                            </div>
+                        </div> 
+                    </div> 
+                    
+                    <div class="project-container mb-5 p-4 rounded shadow-lg" style="background-color: #ffffff;">
+                        <h4 class="text-center fw-bold mt-2 mb-4 text-dark project-title">HFA Computer Parts & Repair Services | Capstone Project | Commissioned</h4>
+                        <div class="row g-4 justify-content-center">
+                            <div class="col-12 mb-3">
+                                <p class="text-center text-dark project-description"><b>Solution Focus:</b> An integrated system for <b>service requests, inventory, and point-of-sale</b> for a computer repair business. This project centralized operations, automated tracking, and served as a successful academic Capstone submission.</p>
+                                <div class="text-center mb-4">
+                                    <span class="custom-badge badge-php me-2">PHP</span>
+                                    <span class="custom-badge badge-general me-2">Bootstrap</span>
+                                    <span class="custom-badge badge-general me-2">HTML/CSS</span>
+                                    <span class="custom-badge badge-mysql me-2">MySQL</span>
+                                    <span class="custom-badge badge-js me-2">JavaScript</span>
+                                    <span class="custom-badge badge-status me-2">Academic</span>
+                                    <span class="custom-badge badge-status me-2">Capstone</span>
+                                    <span class="custom-badge badge-status me-2">Commissioned</span>
+                                </div>
+                                <div class="text-center mt-3">
+                                    <a href="files/hfa_documentation.pdf" target="_blank" class="btn btn-primary btn-lg"><i class="fas fa-file-alt me-1"></i> <b>View Capstone Documentation</b></a>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6">
+                                <div class="portfolio-item card shadow h-100">
+                                    <img src="images/website/hfa/hfa1.png" loading="lazy" class="img-fluid rounded-top" alt="HFA Screenshot 1" onclick="openLightbox(this)">
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6">
+                                <div class="portfolio-item card shadow h-100">
+                                    <img src="images/website/hfa/hfa2.png" loading="lazy" class="img-fluid rounded-top" alt="HFA Screenshot 2" onclick="openLightbox(this)">
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6">
+                                <div class="portfolio-item card shadow h-100">
+                                    <img src="images/website/hfa/hfa3.png" loading="lazy" class="img-fluid rounded-top" alt="HFA Screenshot 3" onclick="openLightbox(this)">
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6">
+                                <div class="portfolio-item card shadow h-100">
+                                    <img src="images/website/hfa/hfa4.png" loading="lazy" class="img-fluid rounded-top" alt="HFA Screenshot 4" onclick="openLightbox(this)">
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6">
+                                <div class="portfolio-item card shadow h-100">
+                                    <img src="images/website/hfa/hfa5.png" loading="lazy" class="img-fluid rounded-top" alt="HFA Screenshot 5" onclick="openLightbox(this)">
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6">
+                                <div class="portfolio-item card shadow h-100">
+                                    <img src="images/website/hfa/hfa6.png" loading="lazy" class="img-fluid rounded-top" alt="HFA Screenshot 6" onclick="openLightbox(this)">
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6">
+                                <div class="portfolio-item card shadow h-100">
+                                    <img src="images/website/hfa/hfa7.png" loading="lazy" class="img-fluid rounded-top" alt="HFA Screenshot 7" onclick="openLightbox(this)">
+                                </div>
+                            </div>
+                        </div> 
+                    </div> 
 
-                        <div class="col-lg-4 col-md-6">
-                            <div class="portfolio-item card shadow h-100">
-                                <img src="images/website/ims/ims1.png" loading="lazy" class="img-fluid rounded-top" alt="IMS Screenshot 1" onclick="openLightbox(this)">
+                    <div class="project-container mb-5 p-4 rounded shadow-lg" style="background-color: #ffffff;">
+                        <h4 class="text-center fw-bold mt-2 mb-4 text-dark project-title">Cavite State University - Tanza Campus E-Library | Capstone Project</h4>
+                        <div class="row g-4 justify-content-center">
+                            <div class="col-12 mb-3">
+                                <p class="text-center text-dark project-description"><b>Solution Focus:</b> A digital library system designed to manage and provide <b>authenticated access</b> to academic resources, successfully digitizing the library process for the university campus and supporting Capstone research.</p>
+                                <div class="text-center mb-4">
+                                    <span class="custom-badge badge-php me-2">PHP</span>
+                                    <span class="custom-badge badge-general me-2">Bootstrap</span>
+                                    <span class="custom-badge badge-general me-2">HTML/CSS</span>
+                                    <span class="custom-badge badge-mysql me-2">MySQL</span>
+                                    <span class="custom-badge badge-status me-2">Academic</span>
+                                    <span class="custom-badge badge-status me-2">Capstone</span>
+                                </div>
+                                <div class="text-center mt-3">
+                                    <a href="files/cvsu_library_documentation.pdf" target="_blank" class="btn btn-primary btn-lg"><i class="fas fa-file-alt me-1"></i> <b>View Capstone Documentation</b></a>
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6">
-                            <div class="portfolio-item card shadow h-100">
-                                <img src="images/website/ims/ims2.png" loading="lazy" class="img-fluid rounded-top" alt="IMS Screenshot 2" onclick="openLightbox(this)">
+                            <div class="col-lg-4 col-md-6">
+                                <div class="portfolio-item card shadow h-100">
+                                    <img src="images/website/e_library/e_library_1.jpg" loading="lazy" class="img-fluid rounded-top" alt="E-Library Screenshot 1" onclick="openLightbox(this)">
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6">
-                            <div class="portfolio-item card shadow h-100">
-                                <img src="images/website/ims/ims3.png" loading="lazy" class="img-fluid rounded-top" alt="IMS Screenshot 3" onclick="openLightbox(this)">
+                            <div class="col-lg-4 col-md-6">
+                                <div class="portfolio-item card shadow h-100">
+                                    <img src="images/website/e_library/e_library_2.jpg" loading="lazy" class="img-fluid rounded-top" alt="E-Library Screenshot 2" onclick="openLightbox(this)">
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6">
-                            <div class="portfolio-item card shadow h-100">
-                                <img src="images/website/ims/ims4.png" loading="lazy" class="img-fluid rounded-top" alt="IMS Screenshot 4" onclick="openLightbox(this)">
+                            <div class="col-lg-4 col-md-6">
+                                <div class="portfolio-item card shadow h-100">
+                                    <img src="images/website/e_library/e_library_3.jpg" loading="lazy" class="img-fluid rounded-top" alt="E-Library Screenshot 3" onclick="openLightbox(this)">
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6">
-                            <div class="portfolio-item card shadow h-100">
-                                <img src="images/website/ims/ims5.png" loading="lazy" class="img-fluid rounded-top" alt="IMS Screenshot 5" onclick="openLightbox(this)">
+                            <div class="col-lg-6 col-md-6">
+                                <div class="portfolio-item card shadow h-100">
+                                    <img src="images/website/e_library/e_library_4.png" loading="lazy" class="img-fluid rounded-top" alt="E-Library Screenshot 4" onclick="openLightbox(this)">
+                                </div>
                             </div>
-                        </div>
-                    </div> 
-                    
-                    <h4 class="text-center fw-bold mt-5 mb-4 border-bottom pb-2">HFA Computer Parts & Repair Services | Capstone Project | Commissioned</h4>
-                    <div class="row g-4 justify-content-center">
-                        <div class="col-12 mb-3">
-                            <p class="text-center text-muted">A Capstone project delivering an integrated system for service requests, inventory, and point-of-sale for a computer repair business.</p>
-                            <div class="text-center mb-4">
-                                <span class="badge bg-warning text-dark me-2">PHP</span>
-                                <span class="badge bg-success me-2">Boostrap</span>
-                                <span class="badge bg-success me-2">HTML/CSS</span>
-                                <span class="badge bg-warning text-dark me-2">MySQL</span>
-                                <span class="badge bg-success me-2">JavaScript</span>
-                                <span class="badge bg-info me-2">Academic</span>
-                                <span class="badge bg-info me-2">Capstone</span>
-                                <span class="badge bg-info">Commissioned</span>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6">
-                            <div class="portfolio-item card shadow h-100">
-                                <img src="images/website/hfa/hfa1.png" loading="lazy" class="img-fluid rounded-top" alt="HFA Screenshot 1" onclick="openLightbox(this)">
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6">
-                            <div class="portfolio-item card shadow h-100">
-                                <img src="images/website/hfa/hfa2.png" loading="lazy" class="img-fluid rounded-top" alt="HFA Screenshot 2" onclick="openLightbox(this)">
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6">
-                            <div class="portfolio-item card shadow h-100">
-                                <img src="images/website/hfa/hfa3.png" loading="lazy" class="img-fluid rounded-top" alt="HFA Screenshot 3" onclick="openLightbox(this)">
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6">
-                            <div class="portfolio-item card shadow h-100">
-                                <img src="images/website/hfa/hfa4.png" loading="lazy" class="img-fluid rounded-top" alt="HFA Screenshot 4" onclick="openLightbox(this)">
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6">
-                            <div class="portfolio-item card shadow h-100">
-                                <img src="images/website/hfa/hfa5.png" loading="lazy" class="img-fluid rounded-top" alt="HFA Screenshot 5" onclick="openLightbox(this)">
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6">
-                            <div class="portfolio-item card shadow h-100">
-                                <img src="images/website/hfa/hfa6.png" loading="lazy" class="img-fluid rounded-top" alt="HFA Screenshot 6" onclick="openLightbox(this)">
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6">
-                            <div class="portfolio-item card shadow h-100">
-                                <img src="images/website/hfa/hfa7.png" loading="lazy" class="img-fluid rounded-top" alt="HFA Screenshot 7" onclick="openLightbox(this)">
-                            </div>
-                        </div>
-                    </div> 
-                    
-                    <h4 class="text-center fw-bold mt-5 mb-4 border-bottom pb-2">Cavite State University - Tanza Campus E-Library | Capstone Project</h4>
-                    <div class="row g-4 justify-content-center">
-                        <div class="col-12 mb-3">
-                            <p class="text-center text-muted">A digital library system designed to manage and provide access to academic resources for the university campus.</p>
-                            <div class="text-center mb-4">
-                                <span class="badge bg-warning text-dark me-2">PHP</span>
-                                <span class="badge bg-success me-2">Boostrap</span>
-                                <span class="badge bg-success me-2">HTML/CSS</span>
-                                <span class="badge bg-info me-2">Academic</span>
-                                <span class="badge bg-info">Capstone</span>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6">
-                            <div class="portfolio-item card shadow h-100">
-                                <img src="images/website/e_library/e_library_1.jpg" loading="lazy" class="img-fluid rounded-top" alt="E-Library Screenshot 1" onclick="openLightbox(this)">
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6">
-                            <div class="portfolio-item card shadow h-100">
-                                <img src="images/website/e_library/e_library_2.jpg" loading="lazy" class="img-fluid rounded-top" alt="E-Library Screenshot 2" onclick="openLightbox(this)">
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6">
-                            <div class="portfolio-item card shadow h-100">
-                                <img src="images/website/e_library/e_library_3.jpg" loading="lazy" class="img-fluid rounded-top" alt="E-Library Screenshot 3" onclick="openLightbox(this)">
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6">
-                            <div class="portfolio-item card shadow h-100">
-                                <img src="images/website/e_library/e_library_4.png" loading="lazy" class="img-fluid rounded-top" alt="E-Library Screenshot 4" onclick="openLightbox(this)">
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6">
-                            <div class="portfolio-item card shadow h-100">
-                                <img src="images/website/e_library/e_library_5.png" loading="lazy" class="img-fluid rounded-top" alt="E-Library Screenshot 5" onclick="openLightbox(this)">
+                            <div class="col-lg-6 col-md-6">
+                                <div class="portfolio-item card shadow h-100">
+                                    <img src="images/website/e_library/e_library_5.png" loading="lazy" class="img-fluid rounded-top" alt="E-Library Screenshot 5" onclick="openLightbox(this)">
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <hr class="my-5">
+                <hr class="my-5 project-divider">
 
-                <!-- arts section -->
                 <div class="mb-5">
-                    <h2 class="display-5 fw-bold text-center mb-3 text-primary"><i class="fas fa-palette me-2"></i>Creative Design</h2>
+                    <h2 class="display-5 fw-bold text-center mb-3 text-dark section-title"><i class="fas fa-palette me-2 text-info"></i>Creative Design</h2>
                     <p class="text-center text-secondary mb-5">Vexel Art and professional Logo Designs.</p>
 
-                    <h4 class="text-center fw-bold mt-5 mb-4 border-bottom pb-2">Vexel Art Showcase</h4>
+                    <h4 class="text-center fw-bold mt-5 mb-4 border-bottom pb-2 text-dark project-title">Vexel Art Showcase</h4>
                     <div class="row g-4 justify-content-center">
-                        <div class="col-lg-3 col-md-4 col-sm-6">
-                            <div class="portfolio-item card shadow h-100">
-                                <img src="images/vexel_art/6.jpg" loading="lazy" class="img-fluid rounded-top" alt="Vexel Art 6" onclick="openLightbox(this)">
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-4 col-sm-6">
-                            <div class="portfolio-item card shadow h-100">
-                                <img src="images/vexel_art/2.png" loading="lazy" class="img-fluid rounded-top" alt="Vexel Art 2" onclick="openLightbox(this)">
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-4 col-sm-6">
-                            <div class="portfolio-item card shadow h-100">
-                                <img src="images/vexel_art/3.jpg" loading="lazy" class="img-fluid rounded-top" alt="Vexel Art 3" onclick="openLightbox(this)">
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-4 col-sm-6">
-                            <div class="portfolio-item card shadow h-100">
-                                <img src="images/vexel_art/4.jpg" loading="lazy" class="img-fluid rounded-top" alt="Vexel Art 4" onclick="openLightbox(this)">
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-4 col-sm-6">
-                            <div class="portfolio-item card shadow h-100">
-                                <img src="images/vexel_art/5.jpg" loading="lazy" class="img-fluid rounded-top" alt="Vexel Art 5" onclick="openLightbox(this)">
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-4 col-sm-6">
-                            <div class="portfolio-item card shadow h-100">
-                                <img src="images/vexel_art/7.jpg" loading="lazy" class="img-fluid rounded-top" alt="Vexel Art 7" onclick="openLightbox(this)">
-                            </div>
-                        </div>
+                        <div class="col-lg-3 col-md-4 col-sm-6"><div class="portfolio-item card shadow h-100"><img src="images/vexel_art/6.jpg" loading="lazy" class="img-fluid rounded-top" alt="Vexel Art 6" onclick="openLightbox(this)"></div></div>
+                        <div class="col-lg-3 col-md-4 col-sm-6"><div class="portfolio-item card shadow h-100"><img src="images/vexel_art/2.png" loading="lazy" class="img-fluid rounded-top" alt="Vexel Art 2" onclick="openLightbox(this)"></div></div>
+                        <div class="col-lg-3 col-md-4 col-sm-6"><div class="portfolio-item card shadow h-100"><img src="images/vexel_art/3.jpg" loading="lazy" class="img-fluid rounded-top" alt="Vexel Art 3" onclick="openLightbox(this)"></div></div>
+                        <div class="col-lg-3 col-md-4 col-sm-6"><div class="portfolio-item card shadow h-100"><img src="images/vexel_art/4.jpg" loading="lazy" class="img-fluid rounded-top" alt="Vexel Art 4" onclick="openLightbox(this)"></div></div>
+                        <div class="col-lg-3 col-md-4 col-sm-6"><div class="portfolio-item card shadow h-100"><img src="images/vexel_art/5.jpg" loading="lazy" class="img-fluid rounded-top" alt="Vexel Art 5" onclick="openLightbox(this)"></div></div>
+                        <div class="col-lg-3 col-md-4 col-sm-6"><div class="portfolio-item card shadow h-100"><img src="images/vexel_art/7.jpg" loading="lazy" class="img-fluid rounded-top" alt="Vexel Art 7" onclick="openLightbox(this)"></div></div>
                     </div>
 
                     <div class="text-center mt-5">
-                        <a href="https://www.facebook.com/BlitzDS" target="_blank" class="btn btn-primary btn-lg shadow-sm">
+                        <a href="https://www.facebook.com/BlitzDS" target="_blank" class="btn btn-primary btn-lg shadow-sm custom-btn">
                             View More Artworks on Facebook <i class="fas fa-arrow-right ms-2"></i>
                         </a>
                     </div>
 
-                    <h4 class="text-center fw-bold mt-5 mb-4 border-bottom pb-2">Logo Designs</h4>
+                    <h4 class="text-center fw-bold mt-5 mb-4 border-bottom pb-2 text-dark project-title">Logo Designs</h4>
                     <div class="row g-4 justify-content-center">
                         <div class="col-lg-3 col-md-4 col-sm-6">
-                            <div class="portfolio-item card shadow h-100">
+                            <div class="portfolio-item card shadow h-100 logo-card">
                                 <img src="images/logo/2.png" loading="lazy" class="img-fluid rounded-top p-3" alt="Logo 2" onclick="openLightbox(this)">
+                                <p class="text-center text-muted mt-2">Brand: Events Photography and Photobooth</p>
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-4 col-sm-6">
-                            <div class="portfolio-item card shadow h-100">
+                            <div class="portfolio-item card shadow h-100 logo-card">
                                 <img src="images/logo/3.png" loading="lazy" class="img-fluid rounded-top p-3" alt="Logo 3" onclick="openLightbox(this)">
+                                <p class="text-center text-muted mt-2">Brand: Insurance</p>
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-4 col-sm-6">
-                            <div class="portfolio-item card shadow h-100">
+                            <div class="portfolio-item card shadow h-100 logo-card">
                                 <img src="images/logo/4.png" loading="lazy" class="img-fluid rounded-top p-3" alt="Logo 4" onclick="openLightbox(this)">
+                                <p class="text-center text-muted mt-2">Brand: Creative Agency</p>
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-4 col-sm-6">
-                            <div class="portfolio-item card shadow h-100">
+                            <div class="portfolio-item card shadow h-100 logo-card">
                                 <img src="images/logo/5.png" loading="lazy" class="img-fluid rounded-top p-3" alt="Logo 5" onclick="openLightbox(this)">
+                                <p class="text-center text-muted mt-2">Brand: Event Organizer</p>
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-4 col-sm-6">
-                            <div class="portfolio-item card shadow h-100">
+                            <div class="portfolio-item card shadow h-100 logo-card">
                                 <img src="images/logo/6.png" loading="lazy" class="img-fluid rounded-top p-3" alt="Logo 6" onclick="openLightbox(this)">
+                                <p class="text-center text-muted mt-2">Brand: Logistics</p>
                             </div>
                         </div>
                     </div>
                 </div>
-
-            </div>
-        </section>
+            </div> 
+            </section>
         
         <div id="lightbox" class="lightbox" style="display: none;">
             <span class="close" onclick="closeLightbox()">&times;</span>
@@ -286,40 +301,43 @@
                 <p class="lead mb-4">I'm currently available for new opportunities. Let's collaborate and build something amazing together!</p>
                 <div class="d-flex justify-content-center flex-wrap">
                     
-                    <a href="https://www.facebook.com/ronjustin.work" target="_blank" class="btn btn-lg me-3 mb-3" style="background-color: #3b5998; color: white; border-color: #3b5998;">
+                    <a href="https://www.facebook.com/ronjustin.work" target="_blank" class="btn btn-lg me-3 mb-3 contact-btn" style="background-color: #3b5998; color: white; border-color: #3b5998;">
                         <i class="fab fa-facebook-f me-2"></i>Facebook
                     </a>
                     
-                    <a href="mailto:ronjustin22@gmail.com" class="btn btn-light btn-lg me-3 mb-3 text-dark">
+                    <a href="mailto:ronjustin22@gmail.com" class="btn btn-light btn-lg me-3 mb-3 text-dark contact-btn">
                         <i class="fas fa-envelope me-2"></i>Email Me
                     </a>
                     
-                    <a href="https://wa.me/639219879017" target="_blank" class="btn btn-success btn-lg me-3 mb-3">
+                    <a href="https://wa.me/639219879017" target="_blank" class="btn btn-success btn-lg me-3 mb-3 contact-btn">
                         <i class="fab fa-whatsapp me-2"></i>WhatsApp
                     </a>
                     
-                    <a href="https://t.me/639219879017" target="_blank" class="btn btn-info btn-lg me-3 mb-3">
+                    <a href="https://t.me/639219879017" target="_blank" class="btn btn-info btn-lg me-3 mb-3 contact-btn">
                         <i class="fab fa-telegram-plane me-2"></i>Telegram
                     </a>
                     
-                    <a href="viber://chat?number=639219879017" target="_blank" class="btn btn-lg me-3 mb-3" style="background-color: #7360F2; color: white; border-color: #7360F2;">
+                    <a href="viber://chat?number=639219879017" target="_blank" class="btn btn-lg me-3 mb-3 contact-btn" style="background-color: #7360F2; color: white; border-color: #7360F2;">
                         <i class="fab fa-viber me-2"></i>Viber
                     </a>
                     
-                    <button onclick="copyToClipboard()" class="btn btn-outline-light btn-lg mb-3">
+                    <button onclick="copyToClipboard()" class="btn text-light btn-lg mb-3 contact-btn">
                         <i class="fas fa-phone-alt me-2"></i>Copy Phone Number
                     </button>
-                    
                 </div>
             </div>
         </section>
-        
-        <footer class="bg-dark text-secondary py-3 border-top border-secondary">
+
+        <footer class="text-secondary py-3 border-top" style="background-color: #0d1a26; border-color: #1a2e3f !important;">
             <div class="container text-center">
                 <span>2025 &copy; Ron Justin De Guzman. All rights reserved.</span>
             </div>
         </footer>
 
-        </div> <script src="script.js"></script>
+        <button id="scrollToTopBtn" title="Go to top">
+            <i class="fas fa-chevron-up"></i>
+        </button>
+
+        <script src="script.js"></script>
     </body>
 </html>

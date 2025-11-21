@@ -70,3 +70,33 @@ function closeLightbox() {
         lightbox.style.display = "none";
     }
 }
+
+// Get the button element
+const scrollButton = document.getElementById("scrollToTopBtn");
+
+// When the user scrolls down 20px from the top, show the button
+window.onscroll = function() {
+    scrollFunction();
+};
+
+function scrollFunction() {
+    // Check if the user has scrolled more than 200 pixels
+    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+        scrollButton.style.display = "block";
+    } else {
+        scrollButton.style.display = "none";
+    }
+}
+
+// When the button is clicked, scroll to the top of the document
+scrollButton.addEventListener("click", function() {
+    // Modern smooth scroll behavior
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+
+    // Fallback for older browsers (or if you prefer a simpler non-smooth scroll)
+    /* document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0; */
+});
