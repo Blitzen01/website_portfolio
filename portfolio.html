@@ -33,6 +33,10 @@
                 transform: scale(1.05); /* Scales button up by 5% on hover */
                 box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3); /* Stronger shadow on hover */
             }
+
+            /* Para sa mga custom badges mo, siguruhing may margin bottom sila sa CSS file mo rin (style.css) */
+            /* Pero inayos na natin sa HTML gamit ang Bootstrap classes */
+
         </style>
     </head>
 
@@ -87,13 +91,14 @@
                         <div class="row g-4 justify-content-center">
                             <div class="col-12 mb-3">
                                 <p class="text-center text-dark project-description"><b>Solution Focus:</b> A commissioned web interface designed for streamlined inventory and sales tracking, successfully reducing manual errors and providing <b>real-time data visualization</b> through graphs and table-based data display.</p>
-                                <div class="text-center mb-4">
-                                    <span class="custom-badge badge-php me-2">PHP</span>
-                                    <span class="custom-badge badge-mysql me-2">MySQL</span>
-                                    <span class="custom-badge badge-general me-2">Bootstrap</span>
-                                    <span class="custom-badge badge-general me-2">HTML/CSS</span>
-                                    <span class="custom-badge badge-js me-2">JavaScript</span>
-                                    <span class="custom-badge badge-status me-2">Commissioned</span>
+                                
+                                <div class="text-center mb-4 d-flex flex-wrap justify-content-center">
+                                    <span class="custom-badge badge-php me-2 mb-2">PHP</span>
+                                    <span class="custom-badge badge-mysql me-2 mb-2">MySQL</span>
+                                    <span class="custom-badge badge-general me-2 mb-2">Bootstrap</span>
+                                    <span class="custom-badge badge-general me-2 mb-2">HTML/CSS</span>
+                                    <span class="custom-badge badge-js me-2 mb-2">JavaScript</span>
+                                    <span class="custom-badge badge-status me-2 mb-2">Commissioned</span>
                                 </div>
                                 <div class="text-center mt-3">
                                     <a href="files/ims_documentation.pdf" target="_blank" class="btn btn-primary btn-lg"><i class="fas fa-file-alt me-1"></i> <b>View System Documentation</b></a>
@@ -133,15 +138,16 @@
                         <div class="row g-4 justify-content-center">
                             <div class="col-12 mb-3">
                                 <p class="text-center text-dark project-description"><b>Solution Focus:</b> An integrated system for <b>service requests, inventory, and point-of-sale</b> for a computer repair business. This project centralized operations, automated tracking, and served as a successful academic Capstone submission.</p>
-                                <div class="text-center mb-4">
-                                    <span class="custom-badge badge-php me-2">PHP</span>
-                                    <span class="custom-badge badge-general me-2">Bootstrap</span>
-                                    <span class="custom-badge badge-general me-2">HTML/CSS</span>
-                                    <span class="custom-badge badge-mysql me-2">MySQL</span>
-                                    <span class="custom-badge badge-js me-2">JavaScript</span>
-                                    <span class="custom-badge badge-status me-2">Academic</span>
-                                    <span class="custom-badge badge-status me-2">Capstone</span>
-                                    <span class="custom-badge badge-status me-2">Commissioned</span>
+                                
+                                <div class="text-center mb-4 d-flex flex-wrap justify-content-center">
+                                    <span class="custom-badge badge-php me-2 mb-2">PHP</span>
+                                    <span class="custom-badge badge-general me-2 mb-2">Bootstrap</span>
+                                    <span class="custom-badge badge-general me-2 mb-2">HTML/CSS</span>
+                                    <span class="custom-badge badge-mysql me-2 mb-2">MySQL</span>
+                                    <span class="custom-badge badge-js me-2 mb-2">JavaScript</span>
+                                    <span class="custom-badge badge-status me-2 mb-2">Academic</span>
+                                    <span class="custom-badge badge-status me-2 mb-2">Capstone</span>
+                                    <span class="custom-badge badge-status me-2 mb-2">Commissioned</span>
                                 </div>
                                 <div class="text-center mt-3">
                                     <a href="files/hfa_documentation.pdf" target="_blank" class="btn btn-primary btn-lg"><i class="fas fa-file-alt me-1"></i> <b>View Capstone Documentation</b></a>
@@ -190,13 +196,14 @@
                         <div class="row g-4 justify-content-center">
                             <div class="col-12 mb-3">
                                 <p class="text-center text-dark project-description"><b>Solution Focus:</b> A digital library system designed to manage and provide <b>authenticated access</b> to academic resources, successfully digitizing the library process for the university campus and supporting Capstone research.</p>
-                                <div class="text-center mb-4">
-                                    <span class="custom-badge badge-php me-2">PHP</span>
-                                    <span class="custom-badge badge-general me-2">Bootstrap</span>
-                                    <span class="custom-badge badge-general me-2">HTML/CSS</span>
-                                    <span class="custom-badge badge-mysql me-2">MySQL</span>
-                                    <span class="custom-badge badge-status me-2">Academic</span>
-                                    <span class="custom-badge badge-status me-2">Capstone</span>
+                                
+                                <div class="text-center mb-4 d-flex flex-wrap justify-content-center">
+                                    <span class="custom-badge badge-php me-2 mb-2">PHP</span>
+                                    <span class="custom-badge badge-general me-2 mb-2">Bootstrap</span>
+                                    <span class="custom-badge badge-general me-2 mb-2">HTML/CSS</span>
+                                    <span class="custom-badge badge-mysql me-2 mb-2">MySQL</span>
+                                    <span class="custom-badge badge-status me-2 mb-2">Academic</span>
+                                    <span class="custom-badge badge-status me-2 mb-2">Capstone</span>
                                 </div>
                                 <div class="text-center mt-3">
                                     <a href="files/cvsu_library_documentation.pdf" target="_blank" class="btn btn-primary btn-lg"><i class="fas fa-file-alt me-1"></i> <b>View Capstone Documentation</b></a>
@@ -287,7 +294,7 @@
                         </div>
                     </div>
                 </div>
-            </div> 
+            </div>
             </section>
         
         <div id="lightbox" class="lightbox" style="display: none;">
